@@ -28,7 +28,7 @@
   <div class="amazon-header">
     <div class="amazon-header-left-section">
       <a href="amazon.html" class="header-link">
-        <img class="amazon-logo" src="images/amazon-logo-white.png">
+        <img class="amazon-logo" src="images/pngtree-e-commerce-logo-template-image_311731.jpg">
         <img class="amazon-mobile-logo" src="images/amazon-mobile-logo-white.png">
       </a>
     </div>
@@ -47,7 +47,7 @@
         <span class="orders-text">& Orders</span>
       </a>
 
-      <a class="cart-link header-link" href="checkout.html">
+      <a class="cart-link header-link" href="{{ url('/checkout') }}">
         <img class="cart-icon" src="images/icons/cart-icon.png">
         <div class="cart-quantity js-cart-quantity">0</div>
         <div class="cart-text">Cart</div>
@@ -60,7 +60,7 @@
     </div>
   </div>
 
-  <script src="data/products.js"></script>
+  <script  type="module" src="/js/data/products.js"></script>
   <script type="module" src="/js/scripts/amazon.js"></script>
 </body>
 

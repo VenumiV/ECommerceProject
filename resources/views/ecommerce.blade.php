@@ -15,9 +15,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- Here are the CSS files for this page. -->
-  <link rel="stylesheet" href="styles/shared/general.css">
-  <link rel="stylesheet" href="styles/shared/amazon-header.css">
-  <link rel="stylesheet" href="styles/pages/amazon.css">
+  <!-- <link rel="stylesheet" href="/ECommerceProject/resources/css/EcommerceProject/styles/shared/general.css">
+  <link rel="stylesheet" href="/ECommerceProject/resources/css/EcommerceProject/styles/shared/amazon-header.css">
+  <link rel="stylesheet" href="/ECommerceProject/resources/css/EcommerceProject/styles/pages/amazon.css"> -->
+
+  <link rel="stylesheet" href="/css/shared/general.css">
+  <link rel="stylesheet" href="/css/shared/amazon-header.css">
+  <link rel="stylesheet" href="/css/pages/amazon.css">
 </head>
 
 <body>
@@ -57,7 +61,7 @@
   </div>
 
   <script src="data/products.js"></script>
-  <script type="module" src="scripts/amazon.js"></script>
+  <script type="module" src="/js/scripts/amazon.js"></script>
 </body>
 
 </html>

@@ -18,6 +18,6 @@ class AdminController extends Controller
         $data = new Catagory;
         $data->catagory_name = $request->catagory;
         $data->save();
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Catagory Added Successfully');
     }
 }

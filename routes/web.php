@@ -13,11 +13,11 @@ use App\Http\Controllers\HomeController;
 route::get('/', [HomeController::class, 'index']);
 
 //Route::get('/checkout', function () {
- //   return view('checkout');
+//   return view('checkout');
 //});
 
 //Route::get('/dashboard', function () {
- //   return view('dashboard');
+//   return view('dashboard');
 //})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

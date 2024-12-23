@@ -24,9 +24,9 @@ class HomeController extends Controller
             } else {
                 return view('home.userpage');
             }
-        } /*else {
-            return redirect('login');
-        }
-        */
+        } //else {
+        //    return redirect('login');
+        //}
+        
     }
 }

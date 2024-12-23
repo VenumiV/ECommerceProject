@@ -9,6 +9,15 @@
       text-align: center;
       padding-top: 40px;
     }
+
+    .h2_font {
+      font-size: 40px;
+      padding-bottom: 40px;
+    }
+
+    .input_color {
+      color: black;
+    }
   </style>
 </head>
 
@@ -24,7 +33,13 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="div_center">
-            <h2>Add Catagory</h2>
+            <h2 class="h2_font">Add Catagory</h2>
+
+            <form action="{{url('/add_catagory')}}" method="POST">
+              @csrf
+              <input class="input_color" type="text" name="catagory" placeholder="Write catagory Name">
+              <input type="submit" class="btn btn-primary" name="submit" value="Add Catagory">
+            </form>
           </div>
         </div>
       </div>

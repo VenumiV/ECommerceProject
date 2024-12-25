@@ -10,6 +10,9 @@ use App\Http\Controllers\AdminController;
     return view('welcome');
 });
 */
+Route::get('/admin_dashboard', function () {
+    return view('admin.home');
+});
 
 route::get('/', [HomeController::class, 'index']);
 
@@ -51,6 +54,7 @@ route::get('/delete_product/{id}', [AdminController::class, 'delete_product']);
 route::get('/update_product/{id}', [AdminController::class, 'update_product']);
 
 route::post('/update_product_confirm/{id}', [AdminController::class, 'update_product_confirm']);
+
 
 
 

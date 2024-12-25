@@ -57,6 +57,11 @@ route::post('/update_product_confirm/{id}', [AdminController::class, 'update_pro
 
 
 
+route::get('/product_details/{id}', [HomeController::class, 'product_details']);
+
+route::post('/add_cart/{id}', [HomeController::class, 'add_cart']);
+
+
 
 
 //require __DIR__.'/auth.php';

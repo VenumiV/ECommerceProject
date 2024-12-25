@@ -33,12 +33,15 @@
                            </button>
                         </form>
 
-                        @if (Route::has('login'))
+                        <!-- @if (Route::has('login'))
 
                         @auth
                         <li class="nav-item">
 
-                        <a class="btn btn-primary" id="logincss" href="{{ route('login') }}">Logout</a>
+                         <a class="btn btn-primary" id="logincss" href="{{ route('logout') }}">Logout</a>
+                        
+               
+              
                         
                         </li>
                         
@@ -52,7 +55,32 @@
                            <a class="btn btn-success" href="{{ route('register') }}">Registration</a>
                         </li>
                         @endauth
-                        @endif
+                        @endif -->
+
+                        @if (Route::has('login'))
+    @auth
+        <li class="nav-item">
+            <!-- Logout Form -->
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            <a class="btn btn-primary" id="logincss" href="#" 
+               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Logout
+            </a>
+        </li>
+    @else
+        <li class="nav-item">
+            <a class="btn btn-primary" id="logincss" href="{{ route('login') }}">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn btn-success" href="{{ route('register') }}">Registration</a>
+        </li>
+    @endauth
+@endif
+
+
+
                      </ul>
                   </div>
                </nav>

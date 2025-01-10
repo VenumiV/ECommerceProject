@@ -61,7 +61,8 @@ route::get('/product_details/{id}', [HomeController::class, 'product_details']);
 
 route::post('/add_cart/{id}', [HomeController::class, 'add_cart']);
 
-route::get('/sjow_cart/{id}', [HomeController::class, 'show_cart']);
+route::get('/show_cart/{id}', [HomeController::class, 'show_cart']);
 
+route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart']);
 
 //require __DIR__.'/auth.php';

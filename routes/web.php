@@ -35,7 +35,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-route::get('/redirect', [HomeController::class, 'redirect']);
+route::get('/redirect', [HomeController::class, 'redirect'])->middleware('auth','verified');
 
 route::get('/view_catagory', [AdminController::class, 'view_catagory']);
 

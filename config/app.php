@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Facade;
 
 return [
 
@@ -123,4 +124,19 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+
+    
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Class Aliases
+    |--------------------------------------------------------------------------
+    |
+    | This array allows you to alias a class to a shorter name, 
+    | making it easier to reference throughout your application.
+    |
+    */
+
+   
 ];

@@ -49,7 +49,7 @@
 <form action="{{ url('search') }}" method="get"> 
     @csrf 
     
-    <input type="text" name="search" placeholder="Search for something">
+    <input type="text" style="color: black;" name="search" placeholder="Search for something">
     <input type="submit" value="Search" class="btn btn-outline-primary">
 </form>
 
@@ -77,7 +77,7 @@
                
             </tr>
 
-            @foreach ($order as $order )
+            @forelse($order as $order )
             
            
             <tr>
@@ -117,7 +117,13 @@
 
                 
             </tr>
-           @endforeach
+            @empty
+            <tr>
+                <td colspan="16">
+                    No Data Found
+                </td>
+            </tr>
+           @endforelse
 
            </table>
             </div>

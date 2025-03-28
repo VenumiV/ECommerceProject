@@ -43,8 +43,10 @@ class HomeController extends Controller
 
                 $total_delivered=order::where('delivery_status','=','delivered')->get->count();
 
+                $total_processing=order::where('delivery_status','=','processing')->get->count();
 
-                return view('admin.home',compact('total_product','total_order','total_user','total_revenue','total_delivered'));
+
+                return view('admin.home',compact('total_product','total_order','total_user','total_revenue','total_delivered','total_processing'));
             } else {
                 
                 $product=Product::paginate(9);
@@ -239,5 +241,35 @@ public function stripePost(Request $request,$totalprice)
           
 
 }
+public function show_order(){
+
+if(Auth::id())
+{
+    $user=Auth::user();
+    $userid=$user->id;
+
+
+    $order=order::where('user_id','=',$userod)->get();
+
+
+    return view('home.order',compact('order'));
+
+}
+else{
+    return redirect('login');
+}
+
+}
+
+public function cancel_order($id){
+    $order=order::find($id);
+    $order->delivery_status='You canceled the order';
+    $order->save();
+
+    return redirect()->back();
+}
+
+
+
 }
 

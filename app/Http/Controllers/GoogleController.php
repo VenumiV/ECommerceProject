@@ -39,7 +39,7 @@ class GoogleController extends Controller
 
                 Auth::login($newUser);
 
-                return redirect()->intended('/home');
+                return redirect()->intended('/');
             }
         } catch (Exception $e) {
             dd($e->getMessage());

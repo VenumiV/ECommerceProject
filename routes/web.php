@@ -4,12 +4,14 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GoogleController;
 
 
 /*Route::get('/', function () {
     return view('welcome');
 });
 */
+
 Route::get('/admin_dashboard', function () {
     return view('admin.home');
 });
@@ -35,7 +37,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-route::get('/redirect', [HomeController::class, 'redirect'])->middleware('auth','verified');
+route::get('/redirect', [HomeController::class, 'redirect'])->middleware('auth', 'verified');
 
 route::get('/view_catagory', [AdminController::class, 'view_catagory']);
 
@@ -83,7 +85,7 @@ route::get('/cash_order', [HomeController::class, 'cash_order']);
 //require __DIR__.'/auth.php';
 route::get('/stripe/{totalprice}', [HomeController::class, 'stripe']);
 
-route::post('stripe/{totalprice}', [HomeController::class,'stripePost'])->name('stripe.post');
+route::post('stripe/{totalprice}', [HomeController::class, 'stripePost'])->name('stripe.post');
 
 route::get('/show_order', [HomeController::class, 'show_order']);
 
@@ -99,3 +101,6 @@ route::get('/products', [HomeController::class, 'product']);
 
 route::get('/search_product', [HomeController::class, 'search_product']);
 
+route::get('/auth/google', [GoogleController::class, 'googlepage']);
+
+route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
